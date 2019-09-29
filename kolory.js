@@ -13,7 +13,7 @@ let handleKlikOnKwadrat = function (event) {
     odegrajKolor(kolor,500);
     //
     ukryjKursorWylaczHandlery();
-    przywrocWszystko(2000);
+    przywrocWszystko(2200);
 }
 
 function ukryjKursorWylaczHandlery() {
