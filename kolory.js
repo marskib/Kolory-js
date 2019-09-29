@@ -10,6 +10,7 @@ let handleKlikOnKwadrat = function (event) {
     body.style.backgroundColor = kolor;
     fullScr.style.backgroundColor = kolor;
     [...kwadraty].forEach(kwadrat => kwadrat.style.backgroundColor = kolor);
+    odegrajKolor(kolor,500);
     //
     ukryjKursorWylaczHandlery();
     przywrocWszystko(2000);
@@ -34,6 +35,13 @@ function przywrocWszystko(delay) {
         [...kwadraty].forEach(kwadrat => kwadrat.onclick = handleKlikOnKwadrat);
     }, delay);
 }
+
+function odegrajKolor(kolor, delay) {
+    var plik = "snd/" + kolor + ".ogg"; //A1->a
+    var kolorSound = new Audio(plik);
+    setTimeout(() => kolorSound.play(), delay);
+}
+
 
 let kwadraty = document.querySelectorAll('section div');
 [...kwadraty].forEach(kwadrat => kwadrat.onclick = handleKlikOnKwadrat);
