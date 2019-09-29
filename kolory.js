@@ -13,7 +13,7 @@ let handleKlikOnKwadrat = function (event) {
     odegrajKolor(kolor,500);
     //
     ukryjKursorWylaczHandlery();
-    przywrocWszystko(2200);
+    przywrocWszystko(3000);
 }
 
 function ukryjKursorWylaczHandlery() {
@@ -37,7 +37,7 @@ function przywrocWszystko(delay) {
 }
 
 function odegrajKolor(kolor, delay) {
-    var plik = "snd/" + kolor + ".ogg"; //A1->a
+    var plik = "snd/" + kolor + ".ogg"; 
     var kolorSound = new Audio(plik);
     setTimeout(() => kolorSound.play(), delay);
 }
